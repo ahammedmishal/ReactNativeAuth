@@ -23,9 +23,10 @@ const DashboardScreen = () => {
     })();
   }, [])
   const { data, isSuccess } = useGetLoggedUserQuery(token.access)
+  console.log("UserData",data);
   useEffect(() => {
     if (isSuccess) {
-      dispatch(setUserInfo({ email: data.email, name: data.name }))
+      dispatch(setUserInfo({ province: data.province, name: data.name }))
     }
   })
   return (

@@ -3,12 +3,13 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 // Define a service using a base URL and expected endpoints
 export const userAuthApi = createApi({
   reducerPath: 'userAuthApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://10.0.2.2:8000/api/user/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://45.63.18.150:9090/accounts/' }),
   endpoints: (builder) => ({
+    
     registerUser: builder.mutation({
       query: (user) => {
         return {
-          url: 'register/',
+          url: 'register',
           method: 'POST',
           body: user,
           headers: {
@@ -20,7 +21,7 @@ export const userAuthApi = createApi({
     loginUser: builder.mutation({
       query: (user) => {
         return {
-          url: 'login/',
+          url: 'login',
           method: 'POST',
           body: user,
           headers: {
@@ -32,7 +33,7 @@ export const userAuthApi = createApi({
     getLoggedUser: builder.query({
       query: (token) => {
         return {
-          url: 'profile/',
+          url: 'get_user_profile',
           method: 'GET',
           headers: {
             'authorization': `Bearer ${token}`,

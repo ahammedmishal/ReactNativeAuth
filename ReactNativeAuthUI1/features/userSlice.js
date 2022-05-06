@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
-  email: "",
+  province: "",
   name: "",
 }
 export const userSlice = createSlice({
@@ -8,11 +8,11 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     setUserInfo: (state, action) => {
-      state.email = action.payload.email
+      state.province = action.payload.province
       state.name = action.payload.name
     },
     unSetUserInfo: (state, action) => {
-      state.email = action.payload.email
+      state.province = action.payload.province
       state.name = action.payload.name
     },
   }

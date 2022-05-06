@@ -18,7 +18,7 @@ const SideBar = ({ ...props }) => {
     <DrawerContentScrollView {...props}>
       <View style={{ margin: 15 }}>
         <Text style={{ fontSize: 18, marginBottom: 5, fontWeight: 'bold' }}>{myData.name}</Text>
-        <Text style={{ fontSize: 16, marginBottom: 5 }}>{myData.email}</Text>
+        <Text style={{ fontSize: 16, marginBottom: 5,fontWeight: 'bold' }}>{myData.province}</Text>
         <Text style={{ fontSize: 16, marginBottom: 5 }}>{myAccessToken.access_token}</Text>
       </View>
       <DrawerItemList {...props} />
